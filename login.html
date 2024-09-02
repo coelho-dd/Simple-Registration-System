@@ -11,7 +11,7 @@
         <input type="text" name="email" id="email"><br>
         <label for="password">Password:</label><br>
         <input type="password" name="password" id="password"><br>
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" id="submit">
     </form>
     
     <a href="index.html">
@@ -19,7 +19,22 @@
     </a>
 
     <script>
-        
+        document.getElementById("submit").addEventListener("click", function() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let storedEmail = localStorage.getItem("email");
+            let storedPassword = localStorage.getItem("password");
+
+            if(email == storedEmail && password == storedPassword) {
+                document.write("Loggin you in...");
+                
+                setTimeout(function() {
+                    location.replace("loggedin.html");
+                }, 3000);
+            } else {
+                alert("Oops... Something went wrong.");
+            }
+        })
     </script>
 </body>
 </html>
