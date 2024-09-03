@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Register Page</title>
 </head>
-<body>
-    <form>
+<body class="flex items-center justify-center min-h-screen">
+    <form class="m-20">
         <label for="first-name">First Name:</label><br>
-        <input type="text" name="first-name" id="first-name" required><br>
+        <input type="text" name="first-name" id="first-name" class="border-2" required><br>
         <label for="last-name">Last Name:</label><br>
-        <input type="text" name="last-name" id="last-name" required><br>
+        <input type="text" name="last-name" id="last-name" class="border-2" required><br>
         <label for="email">Email:</label><br>
-        <input type="text" name="email" id="email" required><br>
+        <input type="text" name="email" id="email" class="border-2" required><br>
         <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password" required><br>
-        <input type="submit" value="Send" id="submit">
+        <input type="password" name="password" id="password" class="border-2" required><br>
+        <input type="submit" value="Send" id="submit" class="mt-5 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
     </form>
 
-    <a href="index.html">
+    <a href="index.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
         <button>Go back</button>
     </a>
 
